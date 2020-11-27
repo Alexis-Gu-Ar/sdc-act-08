@@ -1,15 +1,3 @@
-/*
-- Hello:
-    - Recibe el nombre del usuario en un *`string`.*
-    - Retorna la palabra "Hello" mas el *`string`* recibido.
-- Negate:
-    - Recibe un número en un `int64`.
-    - Retorna el negativo del `int64` recibido.
-- Min:
-    - Recibe un slice de tipo `int64`.
-    - Retorna el mínimo de entre los elementos del slice recibido.
-*/
-
 package main
 
 import (
@@ -106,33 +94,6 @@ func (StudentsGradesBook *StudentsGradesBook) GetAverageGradeOfSubject(name stri
 	*reply, err = average(grades)
 	return err
 }
-
-/*
-func (s *Server) Hello(name string, reply *string) error {
-	*reply = "Hello " + name
-	return nil
-}
-
-func (s *Server) Negate(num int64, reply *int64) error {
-	*reply = -num
-	return nil
-}
-
-func (s *Server) Min(slice []int64, reply *int64) error {
-	if len(slice) > 0 {
-		min := slice[0]
-		for _, myInt := range slice {
-			if myInt < min {
-				min = myInt
-			}
-		}
-		*reply = min
-		return nil
-	} else {
-		return errors.New("Empty Slice")
-	}
-}
-*/
 
 func server() {
 	book := StudentsGradesBook{
