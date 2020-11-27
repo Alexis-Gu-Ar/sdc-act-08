@@ -23,7 +23,6 @@ func startClient() {
 	c, err := rpc.Dial("tcp", "127.0.0.1:4242")
 	if err != nil {
 		panic(err)
-		return
 	}
 	var opc int64
 	for {
